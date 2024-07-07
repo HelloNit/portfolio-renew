@@ -1,4 +1,24 @@
+.progress-bar-indicator{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    background-color: #d6d6d6;
+}
 
+.progress-bar{
+    height: 6px;
+    transition: ease-in-out;
+    background: linear-gradient(
+      to right,
+      #ff2600,#ff330f,#090cb4
+    );  
+}
+
+.main-content-home{
+    padding: 0;
+}
 
 .position-elements{
     display: grid;
@@ -29,14 +49,7 @@
     );  
     top: 10px;
     box-shadow: 4px 17px 44px 8px rgba(184,184,184,0.51);
-    /*animation: iphone 4s ease-in-out 1 forwards;*/
 }
-
-/*@keyframes iphone {
-    from { left: 20%; }
-    to { left: 64%; }
-    
-}*/
 
 .buttons-left{
     display: flex;
@@ -167,7 +180,7 @@ ol{
     list-style: auto;
 }
 
-.csd, .porter, .competitive{
+.csd, .porter, .competitive, .questions{
     padding: 40px;
 }
 
@@ -341,23 +354,45 @@ ol{
     text-align: center;
 }
 
-.material-symbols-rounded {
-    font-size: 30px;
+.material-symbols-rounded{
+    color: #202020;
+    font-size: 28px;
+    font-weight: 500;
 }
 
 table{
     width: 100%;
+    background-color: #f7f7f71c;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 20px;
+    box-shadow: 1px 2px 20px -3px rgb(179, 179, 179);
 }
 
 th{
+    width: 100vh;
+    background-color: #eaebec27;
+    table-layout: fixed;
     text-align: left;
-    background-color: #dfdfdf;
     padding: 10px;
     border-radius: 10px;
+    border: 1px solid rgb(227, 228, 227);
 }
 
 tr{
     text-align: center;
+    font-family: "Mulish", sans-serif;
+    font-size: 16px;
+    color: var(--text-color);
+}
+
+.close{
+    background-color: #ff5b5bf6;
+    border-radius: 6px;
+}
+
+.positive{
+    border-radius: 6px;
 }
 
 .item-list{
@@ -365,7 +400,14 @@ tr{
 }
 
 .company{
+    width: 100vh;
+    height: 30px;
     text-align: center;
+    img{
+        object-fit: contain;
+        width: 40%;
+        height: 100%;
+    }
 }
 
 .features{
@@ -373,4 +415,12 @@ tr{
     justify-content: center;
     align-items: center;
     text-align: left;
+}
+
+.questions{
+    height: 100vh;
+}
+
+i{
+    text-decoration: underline;
 }
