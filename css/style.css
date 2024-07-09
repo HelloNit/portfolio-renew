@@ -142,7 +142,7 @@ h1{
 h2{
     font-family: "Mulish", sans-serif;
     font-weight: 700;
-    font-size: 30px;
+    font-size: 38px;
     letter-spacing: -1px;
     color: #686767;
     margin: 10px 0px 10px 0px;
@@ -173,6 +173,12 @@ h6{
     font-style: italic;
     letter-spacing: -1px;
     color: #727272;
+}
+
+caption{
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 10px;
 }
 
 /* Mouse */

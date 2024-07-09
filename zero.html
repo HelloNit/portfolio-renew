@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,1,0" />
     <link rel="stylesheet" href="/css/style.css">
     <link rel="stylesheet" href="/css/scroll.css">
@@ -183,8 +184,8 @@
         <div class="divider"></div>
         <div class="competitive">
             <h2>Analise competitiva</h2>
-            <p>Este recurso nos ajuda a entender qual a qualidade e cuidado que a plataforma oferece para o usuário, seja com instrumentos internos ou até mesmo externos como a disponibilidade de suporte por e-mail ou Discord.</p>
-            <p>As plataformas escolhidas e filtradas foram as mais conhecidas do mercado nacional e internacional, sendo elas: <strong>DFgames, GGMax, Playactions, Melhor dos Games e Desapego Games.</strong></p>
+            <p>Este recurso nos ajuda a entender qual a qualidade e cuidado que a plataforma oferece para o usuário, seja com instrumentos internos ou até mesmo externos como a disponibilidade de suporte por e-mail ou Discord.
+            As plataformas escolhidas e filtradas foram as mais conhecidas do mercado nacional e internacional, sendo elas: <strong>DFgames, GGMax, Playactions, Melhor dos Games e Desapego Games.</strong></p>
             <p>O gráfico apresentado tem uma relação direcional de <strong>eixo X e exio Y</strong>. O eixo Y representa uma <strong>experiência de usuário alta ou baixa</strong> enquanto o eixo X representa funções<strong>básicas ou avançadas</strong>de cada plataforma.</p>
             <div class="status-competitive">
                 <h6>Guia Gráfico</h6>
@@ -307,7 +308,7 @@
             </div>
         </div>
         <div class="divider"></div>
-        <div class="questions">
+        <div class="questions-quali">
             <h2>Análise quantitativa</h2>
             <p>Após reunir um grupo de jogadores ativos que jogam diversos tipos de jogos, como <strong>MOBA</strong>, <strong>Battle Royale</strong>, <strong>FPS</strong>, entre outros. Iniciamos uma série de conversas na plataforma <strong>Discord</strong>. Durante essas conversas, pude coletar várias ideias para a elaboração tanto do questionário quantitativo quanto do qualitativo.
             </p>
@@ -315,19 +316,96 @@
                 Esses tipo de questionário é essencial saber que, muitos usuários que respondem o formulário, não respondem formulários que tomam mais de 10 minutos, com essa informação, consegui construir de forma consisa, direta é que fosse rápido para responder
                 <br>Fonte: <a href="https://www.surveymonkey.com/curiosity/eliminate-survey-fatigue-fix-3-things-respondents-hate/?ut_source=mp&ut_source2=how-to-create-surveys&ut_source3=inline" target="_blank" rel="noopener noreferrer"><i>Eliminate survey fatigue: Fix 3 things your respondents hate!</i></a>
             </p>
-            <span>Perguntas</span>
             <div class="ask">
-                <caption>Quantos anos você tem?</caption>
-                <caption>Qual seu ID no Discord?</caption>
-                <caption>Você joga algo atualmente?</caption>
-                <caption>Você já vendeu algum item, conta ou cash?</caption>
-                <caption>Conhece alguma plataforma de vendas de contas?</caption>
-                <caption>Você tem algum apego a suas contas ou itens?</caption>
-                <caption>Você estaria disposto a vender sua conta, itens ou cash?</caption>
+                <span>Perguntas // <i><strong>20 Pessoas responderam</strong></i></span>
+                <li class="list-stylized"><strong>Seu ID no Discord</strong></li>
+                <li class="list-stylized"><strong>Você joga algo atualmente?</strong></li>
+                <li class="list-stylized"><strong>Você já vendeu algum item, conta ou cash?</strong></li>
+                <li class="list-stylized"><strong>Conhece alguma plataforma de vendas de contas?</strong></li>
+                <li class="list-stylized"><strong>Você tem algum apego a suas contas ou itens?</strong></li>
+                <li class="list-stylized"><strong>Você estaria disposto a vender sua conta, itens ou cash?</strong></li>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div class="questions-quant">
+            <h2>Análise qualitativa</h2>
+            <p></p>
+            <div class="ask-quant">
+                <span>Perguntas</span>
+                <div class="display-grid-questions">
+                <li class="list-stylized">
+                    <strong>Qual a sua idade? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>16 - 20 Anos</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>21 - 30 Anos</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>31 - 40 Anos</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>40 anos mais</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Você trabalha atualmente? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Sim</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Não</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Você sente algum sentimento por suas contas? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Sim</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Não</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Quais jogos você já jogou? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>League of Legends</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Dota 2</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Free Fire</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Valorant</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Fortnite</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Clash of Clans</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Tibia ou derivados</p>
+                    <p class="position-icon">Outros:____________</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Conhece alguma dessas marcas? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Df Games</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>GGMax</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>PlayerAuctions</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Melhor dos Games</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Desapego Games</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Nenhuma</p>
+                </li>
+                <li class="list-stylized"><strong>Por qual motivo você VENDERIA sua conta?</strong>
+                    <p class="position-icon">Comente:____________</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Por qual motivo você NÃO VENDERIA sua conta?</strong>
+                    <p class="position-icon">Comente:____________</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Quais e-commerces você já utilizou? *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Amazon</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Aliexpress</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Olx</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Shopee</p>
+                </li>
+                <li class="list-stylized">
+                    <strong>Você se sentiria seguro vendendo  *</strong>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Amazon</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Aliexpress</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Olx</p>
+                    <p class="position-icon"><span class="material-symbols-rounded">check_box_outline_blank</span>Shopee</p>
+                </li>
+            </div>
+            <div class="divider"></div>
+            <p><strong>Ferramenta utilizada: </strong> Google Forms</p>
+            <p><strong>Participantes </strong>28 Pessoas</p>
+            </div>
+            <div class="graph-q-one">
+                <div class="chart-position">
+                    <li><strong><p>Qual a sua idade? *</p></strong></li>
+                    <canvas id="ageChart"></canvas>
+                </div>
             </div>
         </div>
         </main>
+        <script src="/script.js"></script>
+        <script src="/chart.js"></script>
+        <div id="cursor-pointer"></div>
 </body>
-<script src="/script.js"></script>
-<div id="cursor-pointer"></div>
 </html>
