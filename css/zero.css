@@ -441,19 +441,14 @@ i{
 
 .graph-q-one{
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
-    width: 30px;
-    height: 30px;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
+    width: 100%;
+
 }
 
 .chart-position{
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 30;
-}
-
-canvas{
-    width: 100px;
-    height: 100px;
+    width: 300px;
 }
