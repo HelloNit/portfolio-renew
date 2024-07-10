@@ -12,33 +12,6 @@ body{
 
 /* Themes */
 
-:root{
-    --body-bg: #ffffff;
-    --header-color: #ffffff;
-    --text-color: #000;
-    --sub-title: #a1a1a1;
-    --divider: #eeeeee;
-    --border-color: #eeeeee;
-}
-
-.dark{
-    --body-bg: #1d1d1d; 
-    --header-color: #1b1b1b;
-    --text-color: #f0f0f0;
-    --sub-title: #838383;
-    --divider: #444444;
-    --border-color: #444444;
-}
-
-.red{
-    --body-bg: #854646; 
-    --header-color: #0000;
-    --text-color: #f0f0f0;
-    --sub-title: #838383;
-    --divider: #3a3a3a;
-    --border-color: #eeeeee;
-}
-
 .theme{
     width: 30px;
     height: 30px;
@@ -121,13 +94,72 @@ body{
 
 /* Titles */
 
+:root{
+    --body-bg: #ffffff;
+    --header-color: #ffffff;
+    --icon-color: #000;
+
+    --title: #000;
+    --sub-title: #a1a1a1;
+    --text-color: #000;
+    --link: #1331df;
+    
+    --divider: #eeeeee;
+    --border-color: #d4d4d4;
+    --box-shadow: 4px 17px 44px 8px rgba(243, 234, 234, 0.51);
+    --card-bg-color: #ffffff;
+
+    
+    --section-primary: #ffffff;
+    --section-secondary: #fdfcfc;
+
+    --positive: #fff;
+    --alert: #fff;
+    --negative: #fff
+}
+
+.dark{
+    --body-bg: #1d1d1d; 
+    --header-color: #181818;
+    --icon-color: #f3f3f3;
+    --link: #22c8fa;
+    
+    --title: #cecece;
+    --sub-title: #686868;
+    --text-color: #d1cccc;
+
+    --divider: #2c2c2c;
+    --border-color: #444444;
+    --box-shadow: 4px 17px 44px 8px rgba(51, 51, 51, 0.51);
+    --card-bg-color: #202020;
+    
+    --section-primary: #1d1d1d;
+    --section-secondary: #252525;
+
+    --positive: #fff;
+    --alert: #fff;
+    --negative: #fff;
+}
+
+.red{
+    --body-bg: #854646; 
+    --header-color: #1d1d1d00;
+    
+    --sub-title: #838383;
+    --text-color: #f0f0f0;
+
+    --divider: #3a3a3a;
+    --border-color: #eeeeee;
+}
+
+
 p{
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     font-optical-sizing: auto;
     line-break: auto;
     margin: 20px 0px 20px 0px;
-    color: #4e4d4d;
+    color: var(--text-color);
 }
 
 h1{
@@ -135,7 +167,7 @@ h1{
     font-weight: 700;
     font-size: 60px;
     letter-spacing: -2px;
-    color: #818181;
+    color: var(--title);
     margin: 40px 0px 40px 0px;
 }
 
@@ -144,7 +176,7 @@ h2{
     font-weight: 700;
     font-size: 38px;
     letter-spacing: -1px;
-    color: #686767;
+    color: var(--title);
     margin: 10px 0px 10px 0px;
 }
 
@@ -153,7 +185,7 @@ h3{
     font-weight: 700;
     font-size: 22px;
     letter-spacing: -1px;
-    color: #686767;
+    color: var(--title);
     margin: 10px 0px 10px 0px;
 }
 
@@ -162,7 +194,7 @@ h4{
     font-weight: 700;
     font-size: 20px;
     letter-spacing: -2px;
-    color: #ff2600;
+    color: var(--title);
     margin: 10px 10px 10px 10px;
 }
 
@@ -172,13 +204,7 @@ h6{
     font-size: 18px;
     font-style: italic;
     letter-spacing: -1px;
-    color: #727272;
-}
-
-caption{
-    font-family: "Mulish", sans-serif;
-    font-weight: 700;
-    font-size: 10px;
+    color: var(--title);
 }
 
 /* Mouse */
