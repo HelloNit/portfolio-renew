@@ -82,6 +82,7 @@ document.addEventListener('DOMContentLoaded', () => {
       dots.style.display = "none";
       btnText.innerHTML = "Recolher"
       more.style.display = "inline";
+      drawCharts();
     }
   }
 
