@@ -16,6 +16,11 @@ body{
     width: 30px;
     height: 30px;
     border-radius: 100%;
+    border: 2px solid #a9a9aa;
+}
+
+.theme:hover{
+    border: 2px solid #f86f2f;
 }
 
 .themes .theme:nth-child(1) {
@@ -41,7 +46,7 @@ body{
     width: 100%;
     height: 100vh;
     padding: 60px 60px 60px 60px;
-    margin: 0px 0px 0px 300px;
+    margin: 0px 200px 0px 200px;
 }
 
 .works{
@@ -54,6 +59,9 @@ body{
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     margin-top: 60px;
+    a{
+        text-decoration: none;
+    }
 }
 
 .card {
@@ -64,7 +72,7 @@ body{
     box-shadow: 11px 14px 58px -3px rgba(168, 168, 168, 1);
     transition-timing-function: ease-out;
     mix-blend-mode: luminosity;
-    transform: rotate3d(0), scale(0.10);
+    text-decoration: none;
 }
   
 .card img {
@@ -84,6 +92,9 @@ body{
     position: relative;
     top: -100%;
     left: 0px;
+    h4{
+        color: #f86f2f;
+    }
 }
 
 /* Divider */
@@ -95,7 +106,7 @@ body{
 /* Titles */
 
 :root{
-    --body-bg: #ffffff;
+    --body-bg: #fcfcfc;
     --header-color: #ffffff;
     --icon-color: #000;
 
@@ -111,7 +122,7 @@ body{
 
     
     --section-primary: #ffffff;
-    --section-secondary: #fdfcfc;
+    --section-secondary: #ffffff;
 
     --positive: #fff;
     --alert: #fff;
@@ -120,7 +131,7 @@ body{
 
 .dark{
     --body-bg: #1d1d1d; 
-    --header-color: #181818;
+    --header-color: #181818d3;
     --icon-color: #f3f3f3;
     --link: #22c8fa;
     
@@ -215,7 +226,7 @@ h6{
     background-color: #ff2600;
     border-radius: 100%;
     mix-blend-mode: color-dodge;
-    width: 40px;
-    height: 40px;
+    width: 20px;
+    height: 20px;
     z-index: 9999;
 }
