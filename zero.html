@@ -17,11 +17,24 @@
 
 <body>
     <header id="navbar"></header>
+    <div class="side-bar-section">
+        <span class="title-side-bar">Mapa</span>
+        <div class="divider"></div>
+        <div class="btns-section">
+            <button data-target="inicio"><span class="material-symbols-rounded">flag</span>Início</button>
+            <button data-target="desafio"><span class="material-symbols-rounded">model_training</span>Desafio</button>
+            <button data-target="porter"><span class="material-symbols-rounded">pivot_table_chart</span>Porter</button>
+            <button data-target="analise"><span class="material-symbols-rounded">groups</span>Análise competitiva</button>
+            <button data-target="definicao"><span class="material-symbols-rounded">conversion_path</span>Definição de Fase</button>
+            <button data-target="jornada"><span class="material-symbols-rounded">arrow_or_edge</span>Jornada de usuário</button>
+        </div>
+        <div class="divider"></div>
+    </div>
     <main>
         <div class="progress-bar-indicator">
             <div class="progress-bar" id="bar"></div>
         </div>
-        <div class="position-elements">
+        <div id="inicio" class="position-elements">
             <div class="begin">
                 <h6>Posição: UX/UI Designer</h6>
                 <h1>Pixel: Level Zero <br> Markteplace</h1>
@@ -96,18 +109,21 @@
                 </div>
             </div>
         </div>
-        <div class="csd">
+        <div id="csd" class="csd">
             <h2>Matriz CSD</h2>
-            <p>Esse método é utilizado para iniciar projetos. O objetivo é reunir informações sobre o produto, com esse método a gestão de informação se torna mais organizadas para o Kick Off</p>
+            <p>Esse método é utilizado para iniciar projetos. O objetivo é reunir informações sobre o produto, com esse
+                método a gestão de informação se torna mais organizadas para o Kick Off</p>
             <div class="position-csd">
                 <img src="/assets/imagem/certezas.png" alt="">
                 <img src="/assets/imagem/suposicoes.png" alt="">
                 <img src="/assets/imagem/duvidas.png" alt="">
             </div>
         </div>
-        <div class="porter">
+        <div id="porter" class="porter">
             <h2>Forças de porter</h2>
-            <p>Este modelo de análise de competitividade entre empresas são úteis para entender as forças que atuam fora das empresas selecionadas e suas capacidades de atender o cliente e seus potenciais de lucratividade.</p>
+            <p>Este modelo de análise de competitividade entre empresas são úteis para entender as forças que atuam fora
+                das empresas selecionadas e suas capacidades de atender o cliente e seus potenciais de lucratividade.
+            </p>
             <p></p>
             <div class="position-porter">
                 <div class="categories-porter">
@@ -192,7 +208,7 @@
                 </div>
             </div>
         </div>
-        <div class="competitive">
+        <div id="analise" class="competitive">
             <h2>Analise competitiva</h2>
             <p>Este recurso nos ajuda a entender qual a qualidade e cuidado que a plataforma oferece para o usuário,
                 seja com instrumentos internos ou até mesmo externos como a disponibilidade de suporte por e-mail ou
@@ -541,7 +557,7 @@
                 </div>
             </div>
         </div>
-        <div class="define-phase">
+        <div id="definicao" class="define-phase">
             <h2>Definição de fase</h2>
             <p>Criei dois tipos de usuários diferentes com base nas informações coletadas na pesquisa.</p>
             <div class="personas-position-container">
@@ -955,7 +971,7 @@
                 </div>
             </div>
         </div>
-        <div class="user-joruney">
+        <div id="jornada" class="user-joruney">
             <h2>Jornada do usuário</h2>
             <div class="column-journey">
                 <div class="user-buy">
@@ -978,7 +994,7 @@
                 </div>
             </div>
         </div>
-        <div class="user-flow">
+        <div id="flow" class="user-flow">
             <h2>Fluxo do usuário</h2>
             <p>O fluxo de usuário atua como um auxiliar para mostrar os caminhos que o usuário irá percorrer. Esse
                 método aponta um conjunto de entradas e saídas, proporcionando um resultado bem-sucedido para a ação
@@ -987,7 +1003,7 @@
                 <img src="/assets/imagem/user-flow.png" alt="">
             </div>
         </div>
-        <div class="architecture">
+        <div id="arquitetura" class="architecture">
             <h2>Arquitetura de informações</h2>
             <p>Essa prática foca em organizar os conteúdos, facilitando para que os usuários encontrem os itens
                 desejados e compreendam a plataforma sem dificuldades.</p>

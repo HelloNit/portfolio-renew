@@ -164,4 +164,49 @@ function magnify(imgID, zoom) {
   }
 }
 
-magnify("my-image", 4);
+magnify("my-image", 3);
+
+/* Side bar project */
+
+document.addEventListener('DOMContentLoaded', function() {
+  const buttons = document.querySelectorAll('.btns-section button');
+  const sections = document.querySelectorAll('main .section');
+  
+  buttons.forEach(button => {
+      button.addEventListener('click', function() {
+          const targetId = this.getAttribute('data-target');
+          const targetElement = document.getElementById(targetId);
+          if (targetElement) {
+              targetElement.scrollIntoView({ behavior: 'smooth' });
+              updateActiveButton(targetId);
+          }
+      });
+  });
+
+  // Função para atualizar a classe ativa
+  function updateActiveButton(activeId) {
+      buttons.forEach(button => {
+          if (button.getAttribute('data-target') === activeId) {
+              button.classList.add('active');
+          } else {
+              button.classList.remove('active');
+          }
+      });
+  }
+
+  // Função para verificar a seção visível e atualizar a classe ativa
+  function checkVisibleSection() {
+      sections.forEach(section => {
+          const rect = section.getBoundingClientRect();
+          if (rect.top >= 0 && rect.top < window.innerHeight) {
+              updateActiveButton(section.id);
+          }
+      });
+  }
+
+  // Adiciona um listener de evento de rolagem para verificar a seção visível
+  window.addEventListener('scroll', checkVisibleSection);
+
+  // Verifica a seção visível ao carregar a página
+  checkVisibleSection();
+});

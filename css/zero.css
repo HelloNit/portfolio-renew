@@ -1,3 +1,40 @@
+.side-bar-section{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    position: fixed;
+    height: 100%;
+    padding: 10px;
+    margin-top: 20px;
+    button{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        font-family: "Mulish", sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        color: var(--text-color);
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+
+.active{
+    color:#f86f2f;
+    font-weight: 700;
+}
+
+.title-side-bar{
+    font-family: "Mulish", sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--sub-title);
+    padding: 10px;
+}
+
 h3 {
     text-align: center;
 }
