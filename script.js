@@ -164,21 +164,26 @@ function magnify(imgID, zoom) {
   }
 }
 
-magnify("my-image", 3);
+magnify("my-image", 2);
 
 /* Side bar project */
 
 document.addEventListener('DOMContentLoaded', function() {
   const buttons = document.querySelectorAll('.btns-section button');
   const sections = document.querySelectorAll('main .section');
-  
+  const sideBar = document.querySelector('.side-bar-section');
+  const nextProjectSection = document.querySelector('.next-project');
+  let scrolling = false;
+
   buttons.forEach(button => {
       button.addEventListener('click', function() {
           const targetId = this.getAttribute('data-target');
           const targetElement = document.getElementById(targetId);
           if (targetElement) {
+              scrolling = true;
               targetElement.scrollIntoView({ behavior: 'smooth' });
               updateActiveButton(targetId);
+              setTimeout(() => scrolling = false, 1000); // Desativa a rolagem suave
           }
       });
   });
@@ -196,12 +201,26 @@ document.addEventListener('DOMContentLoaded', function() {
 
   // Função para verificar a seção visível e atualizar a classe ativa
   function checkVisibleSection() {
-      sections.forEach(section => {
-          const rect = section.getBoundingClientRect();
-          if (rect.top >= 0 && rect.top < window.innerHeight) {
-              updateActiveButton(section.id);
+      if (!scrolling) {
+          let activeId = '';
+          sections.forEach(section => {
+              const rect = section.getBoundingClientRect();
+              if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+                  activeId = section.id;
+              }
+          });
+          if (activeId) {
+              updateActiveButton(activeId);
           }
-      });
+
+          // Verifica a visibilidade da seção next-project e ajusta a visibilidade da barra lateral
+          const nextProjectRect = nextProjectSection.getBoundingClientRect();
+          if (nextProjectRect.top < window.innerHeight / 2 && nextProjectRect.bottom > 0) {
+              sideBar.classList.add('side-bar-hidden');
+          } else {
+              sideBar.classList.remove('side-bar-hidden');
+          }
+      }
   }
 
   // Adiciona um listener de evento de rolagem para verificar a seção visível
