@@ -30,6 +30,7 @@
 .side-bar-section {
     transition: opacity 0.5s ease;
 }
+
 .side-bar-hidden {
     opacity: 0;
     pointer-events: none;
@@ -272,12 +273,6 @@ ol{
     transition: 1s ease-in-out;
 }
 
-.steps:hover {
-    box-shadow: var(--box-shadow);
-    background-color: #ffffff27;
-    transition: 1s ease-in-out;
-}
-
 .dots-connect {
     width: 2px;
     height: 20px;
@@ -324,10 +319,6 @@ ol{
         height: 100%;
         border-radius: 20px;
     }
-}
-
-.status-competitive {
-    width: 100%;
 }
 
 .brands-competitives {
@@ -414,12 +405,15 @@ ol{
 }
 
 table {
-    width: 100%;
     background-color: var(--card-bg-color);
     padding: 20px;
     margin-top: 30px;
     border-radius: 20px;
     box-shadow: var(--box-shadow);
+}
+
+.item-list{
+    text-align: left;
 }
 
 th {
@@ -504,7 +498,6 @@ i {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 3fr));
     width: 100%;
-
 }
 
 .chart-position {
@@ -876,7 +869,6 @@ i {
     position: absolute;
     top: 20px;
     padding: 20px;
-    z-index: 999;
 }
 
 .see-also {

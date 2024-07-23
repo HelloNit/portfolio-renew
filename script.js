@@ -1,3 +1,8 @@
+function myFuncion() {
+  const options = document.querySelector('.options');
+  options.classList.toggle('active');
+}
+
 document.addEventListener('DOMContentLoaded', () => {
   const currentTheme = localStorage.getItem('theme') || 'light';
   document.body.className = currentTheme;
@@ -164,7 +169,7 @@ function magnify(imgID, zoom) {
   }
 }
 
-magnify("my-image", 2);
+magnify("my-image", 3);
 
 /* Side bar project */
 

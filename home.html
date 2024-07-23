@@ -19,21 +19,29 @@
         <nav>
             <div class="visible-content-menu">
                 <a href="./home.html"><img class="logo" src="./assets/svg-icon/logo-slack.svg"></a>
-                <button id="menu-mobile">
-                    <div class="dots"></div>
-                    <div class="dots"></div>
-                    <div class="dots"></div>
-                </button>
+                <span onclick="myFuncion()" id="button-menu">
+                    <div class="content-dots">
+                        <div class="dots"></div>
+                        <div class="dots"></div>
+                        <div class="dots"></div>
+                    </div>
+                </span>
             </div>
             <div class="options">
                 <ul>
-                    <li><a class="option_menu" href="">Início</a></li>
+                    <li class="option_menu"><a href="">Início</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
                     <li>
+
+
                         <div class="dropdown">
-                            <button id="dropdown-option" class="option_menu">
+                            
+                            div 1
+                            <button class="option_menu style_for_mobile">
                                 Projetos
                                 <span class="material-symbols-rounded">keyboard_arrow_up</span>
                             </button>
+
+
                             <div class="dropdown-content">
                                 <span class="title-dropdown">Projetos</span>
                                 <div class="tooltip">
@@ -45,11 +53,12 @@
                                     <span class="tooltip-img"><img src="/assets/imagem/taiki-ishikawa-RPYgxWUPhHg-unsplash.jpg"alt=""></span>
                                 </div>
                             </div>
+
                         </div>
                     </li>
-                    <li><a class="option_menu" href="">Sobre</a></li>
-                    <li><a class="option_menu" href="">Contato</a></li>
-                    <li><a class="option_menu" href="">Linkedin</a></li>
+                    <li class="option_menu"><a href="">Sobre</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
+                    <li class="option_menu"><a href="">Contato</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
+                    <li class="option_menu"><a href="">Linkedin</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
                 </ul>
                 <div class="themes">
                     <div class="theme" onclick="changeTheme('light')"></div>
