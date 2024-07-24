@@ -1,8 +1,10 @@
+//Mostrar conteúdo do menu
 function myFuncion() {
-  const options = document.querySelector('.options');
-  options.classList.toggle('active');
+  const contentMenu = document.querySelector('.content-menu');
+  contentMenu.classList.toggle('active');
 }
 
+//Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {
   const currentTheme = localStorage.getItem('theme') || 'light';
   document.body.className = currentTheme;
@@ -18,6 +20,8 @@ const changeTheme = (theme) => {
   document.body.className = theme;
   localStorage.setItem('theme', theme);
 }
+
+//Cursor mouse estilizado
 document.addEventListener("DOMContentLoaded", function () {
   var follower = document.querySelector('#cursor-pointer');
   var delay = 110;
@@ -32,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+//Rotação do card e seguir mouse
 const cards = document.querySelectorAll('.card');
 
 function rotateToMouse(e, card, bounds) {
@@ -65,6 +70,8 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', onMouseMove);
 });
 
+//Chamar Menu
+
 $(document).ready(function () {
   $('#navbar').load('home.html header', function (_response, status, xhr) {
     if (status == "error") {
@@ -74,6 +81,7 @@ $(document).ready(function () {
   });
 });
 
+//Esconder e mostrar mais
 function showText() {
   var dots = document.getElementById("dots");
   var more = document.getElementById("moreInfo");
@@ -91,6 +99,7 @@ function showText() {
   }
 }
 
+//Barra lateral
 var $window = (window)
 
 window.scroll(0, localStorage.getItem('scrollPosition') | 0)
@@ -108,18 +117,19 @@ function theFuncion() {
   document.getElementById("bar").style.width = scrolled + "%"
 }
 
+//Zoom
 function magnify(imgID, zoom) {
   var img, glass, w, h, bw;
   img = document.getElementById(imgID);
 
-  /* Create magnifier glass: */
+
   glass = document.createElement("DIV");
   glass.setAttribute("class", "img-magnifier-glass");
 
-  /* Insert magnifier glass: */
+
   img.parentElement.insertBefore(glass, img);
 
-  /* Set background properties for the magnifier glass: */
+
   glass.style.backgroundImage = "url('" + img.src + "')";
   glass.style.backgroundRepeat = "no-repeat";
   glass.style.backgroundSize = (img.width * zoom) + "px " + (img.height * zoom) + "px";
@@ -127,42 +137,33 @@ function magnify(imgID, zoom) {
   w = glass.offsetWidth / 2;
   h = glass.offsetHeight / 2;
 
-  /* Execute a function when someone moves the magnifier glass over the image: */
+
   glass.addEventListener("mousemove", moveMagnifier);
   img.addEventListener("mousemove", moveMagnifier);
 
-  /*and also for touch screens:*/
   glass.addEventListener("touchmove", moveMagnifier);
   img.addEventListener("touchmove", moveMagnifier);
   function moveMagnifier(e) {
     var pos, x, y;
-    /* Prevent any other actions that may occur when moving over the image */
     e.preventDefault();
-    /* Get the cursor's x and y positions: */
     pos = getCursorPos(e);
     x = pos.x;
     y = pos.y;
-    /* Prevent the magnifier glass from being positioned outside the image: */
     if (x > img.width - (w / zoom)) { x = img.width - (w / zoom); }
     if (x < w / zoom) { x = w / zoom; }
     if (y > img.height - (h / zoom)) { y = img.height - (h / zoom); }
     if (y < h / zoom) { y = h / zoom; }
-    /* Set the position of the magnifier glass: */
     glass.style.left = (x - w) + "px";
     glass.style.top = (y - h) + "px";
-    /* Display what the magnifier glass "sees": */
     glass.style.backgroundPosition = "-" + ((x * zoom) - w + bw) + "px -" + ((y * zoom) - h + bw) + "px";
   }
 
   function getCursorPos(e) {
     var a, x = 0, y = 0;
     e = e || window.event;
-    /* Get the x and y positions of the image: */
     a = img.getBoundingClientRect();
-    /* Calculate the cursor's x and y coordinates, relative to the image: */
     x = e.pageX - a.left;
     y = e.pageY - a.top;
-    /* Consider any page scrolling: */
     x = x - window.pageXOffset;
     y = y - window.pageYOffset;
     return { x: x, y: y };
@@ -171,9 +172,9 @@ function magnify(imgID, zoom) {
 
 magnify("my-image", 3);
 
-/* Side bar project */
+/* Barra lateral */
 
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const buttons = document.querySelectorAll('.btns-section button');
   const sections = document.querySelectorAll('main .section');
   const sideBar = document.querySelector('.side-bar-section');
@@ -181,51 +182,51 @@ document.addEventListener('DOMContentLoaded', function() {
   let scrolling = false;
 
   buttons.forEach(button => {
-      button.addEventListener('click', function() {
-          const targetId = this.getAttribute('data-target');
-          const targetElement = document.getElementById(targetId);
-          if (targetElement) {
-              scrolling = true;
-              targetElement.scrollIntoView({ behavior: 'smooth' });
-              updateActiveButton(targetId);
-              setTimeout(() => scrolling = false, 1000); // Desativa a rolagem suave
-          }
-      });
+    button.addEventListener('click', function () {
+      const targetId = this.getAttribute('data-target');
+      const targetElement = document.getElementById(targetId);
+      if (targetElement) {
+        scrolling = true;
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+        updateActiveButton(targetId);
+        setTimeout(() => scrolling = false, 1000); // Desativa a rolagem suave
+      }
+    });
   });
 
   // Função para atualizar a classe ativa
   function updateActiveButton(activeId) {
-      buttons.forEach(button => {
-          if (button.getAttribute('data-target') === activeId) {
-              button.classList.add('active');
-          } else {
-              button.classList.remove('active');
-          }
-      });
+    buttons.forEach(button => {
+      if (button.getAttribute('data-target') === activeId) {
+        button.classList.add('active');
+      } else {
+        button.classList.remove('active');
+      }
+    });
   }
 
   // Função para verificar a seção visível e atualizar a classe ativa
   function checkVisibleSection() {
-      if (!scrolling) {
-          let activeId = '';
-          sections.forEach(section => {
-              const rect = section.getBoundingClientRect();
-              if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
-                  activeId = section.id;
-              }
-          });
-          if (activeId) {
-              updateActiveButton(activeId);
-          }
-
-          // Verifica a visibilidade da seção next-project e ajusta a visibilidade da barra lateral
-          const nextProjectRect = nextProjectSection.getBoundingClientRect();
-          if (nextProjectRect.top < window.innerHeight / 2 && nextProjectRect.bottom > 0) {
-              sideBar.classList.add('side-bar-hidden');
-          } else {
-              sideBar.classList.remove('side-bar-hidden');
-          }
+    if (!scrolling) {
+      let activeId = '';
+      sections.forEach(section => {
+        const rect = section.getBoundingClientRect();
+        if (rect.top >= 0 && rect.top < window.innerHeight / 2) {
+          activeId = section.id;
+        }
+      });
+      if (activeId) {
+        updateActiveButton(activeId);
       }
+
+      // Verifica a visibilidade da seção next-project e ajusta a visibilidade da barra lateral
+      const nextProjectRect = nextProjectSection.getBoundingClientRect();
+      if (nextProjectRect.top < window.innerHeight / 2 && nextProjectRect.bottom > 0) {
+        sideBar.classList.add('side-bar-hidden');
+      } else {
+        sideBar.classList.remove('side-bar-hidden');
+      }
+    }
   }
 
   // Adiciona um listener de evento de rolagem para verificar a seção visível

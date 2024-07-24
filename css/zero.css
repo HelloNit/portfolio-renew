@@ -7,6 +7,7 @@
     padding: 10px;
     margin-top: 20px;
     button{
+        all: unset;
         display: flex;
         align-items: center;
         gap: 10px;
@@ -212,11 +213,12 @@ ol{
 
 
 .list-stylized {
+    display: flex;
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     list-style: none;
-    padding: 8px 0px 0px 0px;
-    color: var(--text-color);
+    padding: 10px 0px;
+    color: var(--text-color);  
 }
 
 .position-csd {
@@ -482,7 +484,7 @@ i {
 .display-grid-questions {
     display: grid;
     grid-template-columns: auto auto auto;
-    gap: 60px;
+    gap: 10px;
     padding: 20px 0px 10px 0px;
     align-items: start;
 }

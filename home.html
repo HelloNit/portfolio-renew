@@ -17,53 +17,33 @@
 <body>
     <header id="navbar">
         <nav>
-            <div class="visible-content-menu">
-                <a href="./home.html"><img class="logo" src="./assets/svg-icon/logo-slack.svg"></a>
-                <span onclick="myFuncion()" id="button-menu">
-                    <div class="content-dots">
-                        <div class="dots"></div>
-                        <div class="dots"></div>
-                        <div class="dots"></div>
-                    </div>
+            <div class="content-menu-main">
+                <a id="logo" href="#"><img src="/assets/svg-icon/logo-slack.svg" alt=""></a>
+                <span onclick="myFuncion()" id="button-open-menu">
+                    Menu
                 </span>
             </div>
-            <div class="options">
+            <div class="content-menu">
                 <ul>
-                    <li class="option_menu"><a href="">Início</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
-                    <li>
-
-
-                        <div class="dropdown">
-                            
-                            div 1
-                            <button class="option_menu style_for_mobile">
-                                Projetos
-                                <span class="material-symbols-rounded">keyboard_arrow_up</span>
-                            </button>
-
-
-                            <div class="dropdown-content">
-                                <span class="title-dropdown">Projetos</span>
-                                <div class="tooltip">
-                                    <a class="button-menu" href="">#1 Pixel:Level Zero</a>
-                                    <span class="tooltip-img"><img src="/assets/imagem/tran-mau-tri-tam-3xFwO_wTrkg-unsplash.jpg"alt=""></span>
-                                </div>
-                                <div class="tooltip">
-                                    <a class="button-menu" href="">#2 Pixel: Level Zero Marketplace</a>
-                                    <span class="tooltip-img"><img src="/assets/imagem/taiki-ishikawa-RPYgxWUPhHg-unsplash.jpg"alt=""></span>
-                                </div>
-                            </div>
-
+                    <li><a href="">Início</a><span class="material-symbols-rounded">arrow_outward</span></li>
+                    <li class="accordion-position">
+                        <button class="accordion">Projetos<span class="material-symbols-rounded">heart_check</span></button>
+                        <div class="panel style-panel">
+                            <a class="dropdown-link" href="">#1 Pixel:Level Zero Marketplace</a>
+                            <a class="dropdown-link" href="">#2 Pixel Design System</a>
+                            <a class="dropdown-link" href="">#3 Dc Clinical Saint Germain</a>
                         </div>
                     </li>
-                    <li class="option_menu"><a href="">Sobre</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
-                    <li class="option_menu"><a href="">Contato</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
-                    <li class="option_menu"><a href="">Linkedin</a><span class="material-symbols-rounded">keyboard_arrow_up</span></li>
+                    <li><a href="">Sobre</a><span class="material-symbols-rounded">arrow_outward</span></li>
+                    <li><a href="">Contatos</a><span class="material-symbols-rounded">arrow_outward</span></li>
+                    <li class="theme-dark-light">
+                        <span class="sub-title-menu">Theme</span>
+                        <div class="themes">
+                            <div class="theme" onclick="changeTheme('light')"></div>
+                            <div class="theme" onclick="changeTheme('dark')"></div>
+                        </div>
+                    </li>
                 </ul>
-                <div class="themes">
-                    <div class="theme" onclick="changeTheme('light')"></div>
-                    <div class="theme" onclick="changeTheme('dark')"></div>
-                </div>
             </div>
         </nav>
     </header>
@@ -90,7 +70,7 @@
                     <div class="card">
                         <img src="./assets/imagem/ayush-kumar-e068LyLWNfM-unsplash.jpg" alt="">
                         <div class="text-content">
-                            <h4>Pixel: Level Zero Marketplace</h4>
+                            <h4>Pixel: Design System</h4>
                             <h4>2024-2025</h4>
                         </div>
                     </div>
@@ -99,23 +79,35 @@
                     <div class="card">
                         <img src="./assets/imagem/tran-mau-tri-tam-3xFwO_wTrkg-unsplash.jpg" alt="">
                         <div class="text-content">
-                            <h4>Pixel: Level Zero Marketplace</h4>
-                            <h4>2024-2025</h4>
-                        </div>
-                    </div>
-                </a>
-                <a href="">
-                    <div class="card">
-                        <img src="./assets/imagem/tran-mau-tri-tam-3xFwO_wTrkg-unsplash.jpg" alt="">
-                        <div class="text-content">
-                            <h4>Pixel: Level Zero Marketplace</h4>
+                            <h4>Dc Clinical Saint Germain</h4>
                             <h4>2024-2025</h4>
                         </div>
                     </div>
                 </a>
             </div>
     </main>
+    <section class="marquee">
+        <div class="marquee-content">
+            <span>ux design</span>
+            <span>design thinking</span>
+            <span>experiência do usuário</span>
+            <span>teste A/B</span>
+            <span>teste de usabilidade</span>
+            <span>pesquisa qualitativa</span>
+            <span>pesquisa quantitativa</span>
+        </div>
+        <div class="marquee-content">
+            <span>ui design</span>
+            <span>wireframes</span>
+            <span>design system</span>
+            <span>motion design</span>
+            <span>protótipo lo-fi</span>
+            <span>Figma</span>
+            <span>protótipo hi-fi</span>
+        </div>
+    </section>
     <div id="cursor-pointer"></div>
     <script src="./script.js"></script>
 </body>
+
 </html>

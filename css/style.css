@@ -1,25 +1,23 @@
 @import url('https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap');
 
-*{
+* {
     margin: 0%;
 }
 
-body{
-    /* display: flex;
-    flex-direction: row; */
+body {
     background-color: var(--body-bg);
 }
 
 /* Themes */
 
-.theme{
+.theme {
     width: 30px;
     height: 30px;
     border-radius: 100%;
     border: 2px solid #a9a9aa;
 }
 
-.theme:hover{
+.theme:hover {
     border: 2px solid #f86f2f;
 }
 
@@ -35,28 +33,29 @@ body{
     background-color: rgb(57, 2, 2);
 }
 
-.themes{
+.themes {
     display: flex;
     align-items: center;
     gap: 10px;
     padding: 10px 0px 10px 0px;
 }
 
-.main-content-home{
+.main-content-home {
     margin: 60px 200px;
 }
 
-.works{
+.works {
     height: 100%;
 }
 
-.grid{
+.grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
     grid-column-gap: 30px;
     grid-row-gap: 30px;
     margin-top: 60px;
-    a{
+
+    a {
         text-decoration: none;
     }
 }
@@ -71,38 +70,90 @@ body{
     mix-blend-mode: luminosity;
     text-decoration: none;
 }
-  
+
 .card img {
     object-fit: cover;
     width: 100%;
     height: 100%;
     border-radius: 10px;
 }
-  
+
 .card:hover {
     mix-blend-mode: normal;
     transition: 0.3s;
     transform: scale(1);
 }
 
-.text-content{
+.text-content {
     position: relative;
     top: -100%;
     left: 0px;
-    h4{
+
+    h4 {
         color: #f86f2f;
+    }
+}
+
+.marquee {
+    display: flex;
+
+    flex-direction: column;
+    position: relative;
+    -webkit-mask-image: linear-gradient(-60deg, transparent, #fff 90%, #fff 90%, transparent);
+}
+
+.marquee-content span {
+    font-family: "Mulish", sans-serif;
+    font-weight: 100;
+    text-transform: uppercase;
+    font-size: 46px;
+    letter-spacing: -1px;
+    color: var(--text-color);
+}
+
+.marquee-content {
+    display: flex;
+    gap: 40px;
+    white-space: nowrap;
+}
+
+.marquee-content:first-child {
+    animation: marqueeLeft 50s linear infinite;
+}
+
+.marquee-content:last-child {
+    animation: marqueeRight 50s linear infinite;
+}
+
+@keyframes marqueeLeft {
+    from {
+        transform: translateX(20%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes marqueeRight {
+    from {
+        transform: translateX(-20%);
+    }
+
+    to {
+        transform: translateX(100%);
     }
 }
 
 /* Divider */
 
-.divider{
+.divider {
     border: 1px solid var(--divider);
 }
 
 /* Titles */
 
-:root{
+:root {
     --body-bg: #fcfcfc;
     --header-color: #ffffff;
     --icon-color: #000;
@@ -111,13 +162,13 @@ body{
     --sub-title: #a1a1a1;
     --text-color: #000;
     --link: #1331df;
-    
+
     --divider: #eeeeee;
     --border-color: #d4d4d4;
     --box-shadow: 4px 17px 44px 8px rgba(243, 234, 234, 0.51);
     --card-bg-color: #ffffff;
 
-    
+
     --section-primary: #ffffff;
     --section-secondary: #ffffff;
 
@@ -126,12 +177,12 @@ body{
     --negative: #fff
 }
 
-.dark{
-    --body-bg: #1d1d1d; 
+.dark {
+    --body-bg: #1d1d1d;
     --header-color: #181818f5;
     --icon-color: #f3f3f3;
     --link: #22c8fa;
-    
+
     --title: #cecece;
     --sub-title: #686868;
     --text-color: #d1cccc;
@@ -140,7 +191,7 @@ body{
     --border-color: #444444;
     --box-shadow: 4px 17px 44px 8px rgba(51, 51, 51, 0.51);
     --card-bg-color: #202020;
-    
+
     --section-primary: #1d1d1d;
     --section-secondary: #252525;
 
@@ -149,10 +200,10 @@ body{
     --negative: #fff;
 }
 
-.red{
-    --body-bg: #854646; 
+.red {
+    --body-bg: #854646;
     --header-color: #1d1d1d00;
-    
+
     --sub-title: #838383;
     --text-color: #f0f0f0;
 
@@ -160,7 +211,7 @@ body{
     --border-color: #eeeeee;
 }
 
-p{
+p {
     font-family: "Mulish", sans-serif;
     font-size: 16px;
     font-optical-sizing: auto;
@@ -169,7 +220,7 @@ p{
     color: var(--text-color);
 }
 
-h1{
+h1 {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 60px;
@@ -178,7 +229,7 @@ h1{
     margin: 40px 0px 40px 0px;
 }
 
-h2{
+h2 {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 38px;
@@ -187,7 +238,7 @@ h2{
     margin: 10px 0px 10px 0px;
 }
 
-h3{
+h3 {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 22px;
@@ -196,16 +247,17 @@ h3{
     margin: 10px 0px 10px 0px;
 }
 
-h4{
+h4 {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 20px;
     letter-spacing: -2px;
+    text-transform: none;
     color: var(--title);
     margin: 10px 10px 10px 10px;
 }
 
-h6{
+h6 {
     font-family: "Mulish", sans-serif;
     font-weight: 700;
     font-size: 18px;
@@ -214,14 +266,14 @@ h6{
     color: var(--title);
 }
 
-.description{
+.description {
     color: var(--text-color);
     font-family: "Mulish", sans-serif;
 }
 
 /* Mouse */
 
-#cursor-pointer{
+#cursor-pointer {
     position: fixed;
     pointer-events: none;
     background-color: #ff2600;
