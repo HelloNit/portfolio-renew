@@ -1,151 +1,4 @@
-@media (max-width: 600px) {
-
-    header {
-        width: 97%;
-        position: fixed;
-        left: 50%;
-        transform: translateX(-50%);
-        bottom: 10px;
-        z-index: 999;
-    }
-
-    nav {
-        display: flex;
-        align-items: center;
-        flex-direction: column-reverse;
-        padding: 20px 20px;
-        border-radius: 20px;
-        background-color: var(--header-color);
-        border: 1px solid var(--border-color);
-        box-shadow: var(--box-shadow);
-    }
-
-    .content-menu-main {
-        display: flex;
-        justify-content: space-between;
-        width: 100%;
-    }
-
-    .content-menu {
-        display: none;
-        width: 100%;
-        margin-bottom: 40px;
-    }
-
-    .content-menu.active {
-        display: block;
-    }
-
-    .accordion {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        transition: 0.4s;
-    }
-
-    .accordion-position {
-        display: flex;
-        flex-direction: column;
-    }
-
-    #button-open-menu {
-        display: flex;
-        align-items: center;
-        font-family: "Mulish", sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 18px;
-        text-align: center;
-        color: var(--text-color);
-    }
-
-    .dot {
-        width: 20px;
-        height: 2px;
-        background-color: #ffffff;
-    }
-
-    #logo {
-        width: 32px;
-        height: auto;
-
-        img {
-            width: 30px;
-            height: 30px;
-        }
-    }
-
-    ul {
-        display: flex;
-        justify-content: space-between;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-
-    li {
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
-        padding: 20px 20px;
-        width: 100%;
-        height: 100%;
-        list-style: none;
-        color: var(--text-color);
-
-        button {
-            all: unset;
-            font-family: "Mulish", sans-serif;
-            text-transform: uppercase;
-            font-weight: 700;
-            font-size: 18px;
-        }
-    }
-
-    a {
-        text-decoration: none;
-        font-family: "Mulish", sans-serif;
-        text-transform: uppercase;
-        font-weight: 700;
-        font-size: 18px;
-        color: var(--text-color);
-    }
-
-    .sub-title-menu {
-        font-family: "Mulish", sans-serif;
-        font-weight: 700;
-        font-size: 12px;
-        text-transform: uppercase;
-        color: rgb(174, 175, 175);
-    }
-
-    .theme-dark-light {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-    }
-
-    .themes {
-        display: flex;
-        justify-content: center;
-    }
-
-    .style-panel {
-        width: 100%;
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-    }
-
-    .dropdown-link {
-        padding: 20px 0px;
-        font-weight: 400;
-        font-size: 14px;
-        border-top: 1px solid;
-        border-bottom: 1px solid;
-        color: var(--text-color);
-        transition: 0.4s ease-in-out;
-    }
+@media screen and (max-width: 460px) {
 
     h1 {
         font-size: 40px;
@@ -175,6 +28,10 @@
         display: none;
     }
 
+    .link-business{
+        font-size: 40px;
+    }
+
     /* Project Pixel: Level Zero Marketplace */
     .side-bar-section {
         display: none;
@@ -195,6 +52,10 @@
     }
 
     /* Ir arrumando esporadicamente */
+
+    .categories-porter{
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
 
     .position-elements {
         grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
@@ -279,37 +140,57 @@
     }
 
     /* Mapa de empatia */
-    .main-map {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        margin-top: 100px;
+    .content-empathy{
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+        grid-template-rows: repeat(2, 1fr);
+        border: 1px solid var(--border-color);
+        position: relative;
+        margin-top: 60px;
     }
-
-    .card-content {
-        padding: 10px;
-    }
-
-    .alternative-text {
-        font-size: 12px;
-    }
-
-    .img-persona,
-    .pulse-animation {
-        top: 0;
-    }
-
-    .says-and-do,
-    .see,
-    .think,
-    .hear {
+    
+    .column-empathy{
+        position: relative;
         padding: 20px;
+        margin: 10px;
         border: 1px solid var(--border-color);
         border-radius: 30px;
-        position: relative;
+        background-color: var(--section-secondary);
+    }
+    
+    .img-persona{
+        position: absolute;
+        width: 80px;
+        border-radius: 100%;
+        transform: translate(-50%, -50%);
+        border: 2px solid var(--border-color);
+        top: 0;
+        left: 50%;
+        z-index: 100;
+    }
+    
+
+    .whole-content{
+        display: grid;
+        text-align: center;
+        grid-template-columns: 1fr;
+        grid-template-rows: repeat(1, 1fr);
+        gap: 10px;
+    }
+    
+    .container{
+        border: 1px solid var(--border-color);
+        box-shadow: var(--box-shadow);
+        border-radius: 20px;
+        font-size: 14px;
+        padding: 10px;
+        display: flex;
+        align-items: center;
     }
 
     .img-magnifier-glass {
-        width: 200px;
-        height: 200px;
+        width: 90px;
+        height: 90px;
     }
 
     .title-project {
@@ -336,10 +217,63 @@
         text-align: center;
     }
 
-
     .button-media {
         text-align: center;
         font-size: 16px;
     }
 
+}
+
+@media (max-width: 1114px){
+
+    h1 {
+        font-size: 48px;
+    }
+
+    .link-business{
+        font-size: 48px;
+    }
+
+    h3 {
+        text-align: left;
+    }
+
+    .main-content-home {
+        margin: 30px 16px;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
+        grid-column-gap: 30px;
+        grid-row-gap: 30px;
+        margin-top: 30px;
+
+        a {
+            text-decoration: none;
+        }
+    }
+
+    #cursor-pointer {
+        display: none;
+    }
+
+    .position-elements,
+    .csd,
+    .porter,
+    .competitive,
+    .questions-quali,
+    .questions-quant,
+    .define-phase,
+    .empathy-map,
+    .user-joruney,
+    .user-flow,
+    .architecture {
+        padding: 30px 100px;
+    }
+
+    .img-magnifier-glass {
+        width: 30px;
+        height: 30px;
+    }
 }

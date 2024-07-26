@@ -87,7 +87,7 @@ new Chart(ctx4, {
     data: {
     labels: ['Df Games', 'GGMax', 'PlayerAuctions', 'Melhor dos Games', 'Desapego Games', 'G2G', 'Nenhuma'],
     datasets: [{
-    label: 'My First Dataset',
+    label: '',
     data: [8, 13, 6, 4, 3, 7, 7, 3],
     backgroundColor: [
       'rgb(255, 204, 0)',
@@ -111,7 +111,7 @@ new Chart(ctx5, {
     data: {
     labels: ['16 a 20', '21 a 30'],
     datasets: [{
-    label: 'My First Dataset',
+    label: '',
     data: [300, 100],
     backgroundColor: [
       'rgb(255, 99, 132)',

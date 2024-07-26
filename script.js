@@ -1,8 +1,15 @@
-//Mostrar conteúdo do menu
 function myFuncion() {
   const contentMenu = document.querySelector('.content-menu');
   contentMenu.classList.toggle('active');
 }
+
+document.addEventListener('click', (event) => {
+  const navbar = document.getElementById('navbar');
+  if (!navbar.contains(event.target)) {
+    const contentMenu = document.querySelector('.content-menu');
+    contentMenu.classList.remove('active');
+  }
+});
 
 //Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,14 +77,23 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', onMouseMove);
 });
 
-//Chamar Menu
+//Chamar Menu e Footer
 
 $(document).ready(function () {
   $('#navbar').load('home.html header', function (_response, status, xhr) {
-    if (status == "error") {
-      console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
-    } else {
-    }
+      if (status == "error") {
+          console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
+      } else {
+          console.log("Navbar carregada com sucesso.");
+      }
+  });
+
+  $('#footer').load('home.html footer', function (_response, status, xhr) {
+      if (status == "error") {
+          console.error("Erro ao carregar footer:", xhr.status, xhr.statusText);
+      } else {
+          console.log("Footer carregado com sucesso.");
+      }
   });
 });
 
