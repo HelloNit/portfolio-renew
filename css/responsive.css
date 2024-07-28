@@ -258,7 +258,7 @@
         display: none;
     }
 
-    .position-elements,
+    /* .position-elements,
     .csd,
     .porter,
     .competitive,
@@ -270,7 +270,7 @@
     .user-flow,
     .architecture {
         padding: 30px 100px;
-    }
+    } */
 
     .img-magnifier-glass {
         width: 30px;

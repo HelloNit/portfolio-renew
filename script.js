@@ -11,6 +11,59 @@ document.addEventListener('click', (event) => {
   }
 });
 
+//Audio
+document.addEventListener('DOMContentLoaded', (event) => {
+  const audio = document.getElementById('myAudio');
+  const pausePlayBtn = document.getElementById('pause-play');
+  const volumeSlider = document.getElementById('volumeSlider');
+
+  // Carregar estado do áudio do Local Storage
+  const savedVolume = localStorage.getItem('audioVolume');
+  const savedCurrentTime = localStorage.getItem('audioCurrentTime');
+  const isPlaying = localStorage.getItem('audioPlaying') === 'true';
+
+  if (savedVolume !== null) {
+      audio.volume = savedVolume; // Define o volume do áudio
+      volumeSlider.value = savedVolume; // Atualiza o slider para mostrar o volume salvo
+  } else {
+      audio.volume = 0.2; // Volume padrão
+  }
+
+  if (savedCurrentTime !== null) {
+      audio.currentTime = savedCurrentTime; // Define a posição atual do áudio
+  }
+
+  if (isPlaying) {
+      audio.play();
+      pausePlayBtn.classList.add('play'); // Adiciona a classe 'play' para mostrar o ícone de pause
+  } else {
+      audio.pause();
+      pausePlayBtn.classList.remove('play'); // Remove a classe 'play' para mostrar o ícone de play
+  }
+
+  pausePlayBtn.addEventListener('click', () => {
+      if (audio.paused) {
+          audio.play();
+          pausePlayBtn.classList.add('play'); // Mostra o ícone de pause
+          localStorage.setItem('audioPlaying', 'true'); // Salva o estado como tocando
+      } else {
+          audio.pause();
+          pausePlayBtn.classList.remove('play'); // Mostra o ícone de play
+          localStorage.setItem('audioPlaying', 'false'); // Salva o estado como pausado
+      }
+  });
+
+  volumeSlider.addEventListener('input', () => {
+      audio.volume = volumeSlider.value; // Define o volume do áudio
+      localStorage.setItem('audioVolume', volumeSlider.value); // Salva o volume no Local Storage
+  });
+
+  // Salva a posição atual do áudio no Local Storage sempre que mudar
+  audio.addEventListener('timeupdate', () => {
+      localStorage.setItem('audioCurrentTime', audio.currentTime); // Salva o tempo atual do áudio
+  });
+});
+
 //Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {
   const currentTheme = localStorage.getItem('theme') || 'light';
@@ -77,14 +130,14 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', onMouseMove);
 });
 
-//Chamar Menu e Footer
+//Jquery
 
 $(document).ready(function () {
   $('#navbar').load('home.html header', function (_response, status, xhr) {
       if (status == "error") {
           console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
       } else {
-          console.log("Navbar carregada com sucesso.");
+          console.log("Navbar funcionando.");
       }
   });
 
@@ -92,7 +145,7 @@ $(document).ready(function () {
       if (status == "error") {
           console.error("Erro ao carregar footer:", xhr.status, xhr.statusText);
       } else {
-          console.log("Footer carregado com sucesso.");
+          console.log("Footer funcionando.");
       }
   });
 });

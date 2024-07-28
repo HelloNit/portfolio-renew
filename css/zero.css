@@ -1,3 +1,7 @@
+body{
+    background-color: var(--body-bg);
+}
+
 .side-bar-section{
     display: flex;
     justify-content: center;
@@ -245,7 +249,6 @@ ol{
 .user-flow,
 .architecture {
     padding: 60px 300px;
-
 }
 
 .post-sticky {
@@ -312,13 +315,13 @@ ol{
 .image-content {
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
+    align-items: center;
     justify-content: center;
 
     img {
         object-fit: cover;
-        width: 100%;
-        height: 100%;
+        width: 150px;
+        height: 150px;
         border-radius: 20px;
     }
 }
@@ -341,6 +344,19 @@ ol{
     margin-right: auto;
     left: 0;
     right: 40%;
+}
+
+
+.status-competitive{
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
+    padding: 10px;
+    border-radius: 20px;
+}
+
+table{
+    background-color: var(--card-bg-color);
+    border: 1px solid var(--border-color);
 }
 
 .table-one,
@@ -706,7 +722,7 @@ i {
 .pains {
     display: flex;
     flex-direction: column;
-    background-color: var(--section-secondary);
+    background-color: var(--section-primary);
     padding: 20px;
     border-radius: 20px;
     height: 100%;
@@ -726,6 +742,7 @@ i {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
     border: 1px solid var(--border-color);
+    background-color: var(--section-secondary);
     border-radius: 40px;
     position: relative;
     height: 100%;
@@ -760,6 +777,7 @@ i {
 
 .container{
     border: 1px solid var(--border-color);
+    box-shadow: var(--box-shadow);
     border-radius: 20px;
     padding: 10px;
     display: flex;
@@ -808,11 +826,11 @@ i {
 .img-magnifier-glass {
     position: absolute;
     border: 3px solid var(--border-color);
-    background-color: #222121e8;
-    /* border-radius: 100%; */
+    background-color: #868585e8;
+    border-radius: 20px;
     cursor: none;
-    width: 100%;
-    height: 100%;
+    width: 50%;
+    height: 50%;
 }
 
 .lo-fi-wireframing{
