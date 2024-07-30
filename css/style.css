@@ -116,8 +116,8 @@ button{
     padding: 10px 0px 10px 0px;
 }
 
-.main-content-home {
-    margin: 60px 200px;
+.main-content-home, .main-content-about{
+    margin: 60px 100px;
 }
 
 .works {
@@ -229,6 +229,93 @@ button{
 .marquee-content:hover{
     animation-play-state: paused;
 }
+
+/* Sobre */
+
+.title{
+    font-size: 190px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.hero-section{
+    position: relative;
+    height: 100vh;
+    margin: 60px 200px;
+    img{
+        width: 100%;
+        height: 100%;
+        opacity: 0.4;
+        -webkit-mask-image: linear-gradient(95deg, transparent, #fff 100%, #fff 0%, transparent);
+        object-fit: contain;
+    }
+}
+
+.text-content{
+    display: flex;
+    flex-direction: column-reverse;
+    text-align: left;
+    position: absolute;
+    transform: translate(0, -50%);
+    top: 50%;
+    -webkit-mask-image: linear-gradient(225deg, transparent, #552dc2 70%, #0987ad 30%, transparent);
+}
+
+.section-one {
+    -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+    opacity: 0.9; /* Opacidade inicial */
+}
+
+.content-about-me {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr;
+    grid-column-gap: 100px;
+    margin: 40px 0px;
+}
+
+.content-about-me img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.content-about-me p {
+    font-size: 60px;
+    letter-spacing: -2px;
+    padding: 0px;
+    margin: 0;
+}
+
+.spotlight{
+    font-weight: bolder;
+    color: #f86f2f;
+}
+
+.section-two{
+    -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+
+}
+
+.content-about-me-education{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 100px;
+    margin: 40px 0px;
+}
+
+.content-about-me-education h2{
+    font-size: 60px;
+    letter-spacing: -2px;
+}
+
+.content-about-me-education p{
+    font-size: 60px;
+    letter-spacing: -2px;
+}
+
+/* Footer */
 
 footer {
     display: flex;
