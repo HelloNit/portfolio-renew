@@ -104,11 +104,10 @@ button {
     background-color: #333;
 }
 
-/* Blue Color */
-
 .themes .theme:nth-child(3) {
-    background-color: rgb(57, 2, 2);
+    background-color: rgb(172, 26, 128);
 }
+
 
 .themes {
     display: flex;
@@ -440,7 +439,7 @@ footer {
 /* Titles */
 
 :root {
-    --body-bg: #fcfcfc;
+    --body-bg: #fafafa;
     --header-color: #ffffff;
     --icon-color: #000;
     --sticky-top-pos: 30vh;
@@ -451,7 +450,7 @@ footer {
     --text-color: #000;
     --link: #1331df;
 
-    --divider: #eeeeee;
+    --divider: #f8f5f5;
     --border-color: #d4d4d4;
     --box-shadow: 4px 17px 44px 8px rgba(243, 234, 234, 0.51);
     --card-bg-color: #ffffff;

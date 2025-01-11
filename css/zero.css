@@ -62,8 +62,7 @@ body{
 .progress-bar {
     height: 6px;
     transition: ease-in-out;
-    background: linear-gradient(to right,
-            #ff2600, #ff330f, #090cb4);
+    background-color: #00d9ff;
 }
 
 
@@ -311,8 +310,6 @@ ol{
     display: flex;
     align-items: center;
     justify-content: center;
-
-    background-color: #2c5bf7;
     color: white;
 
 }
@@ -322,13 +319,6 @@ ol{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-
-    img {
-        object-fit: cover;
-        width: 150px;
-        height: 150px;
-        border-radius: 20px;
-    }
 }
 
 .brands-competitives {
@@ -486,7 +476,7 @@ tr {
 
 i {
     text-decoration: underline;
-    color: var(--link);
+    color: var(--icon-color);
 }
 
 .ask,
@@ -877,6 +867,7 @@ i {
 .project {
     position: relative;
     overflow: hidden; 
+    width: 100%;
 }
 
 .project:hover img {
@@ -898,7 +889,8 @@ i {
     color: var(--text-color);
     font-weight: 600;
     font-size: 20px;
-    color: #3b3b3b;
+    mix-blend-mode: color-dodge;
+    color: #f86f2f;
 }
 
 .title-project {

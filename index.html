@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://unpkg.com/@phosphor-icons/web@2.1.1"></script>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,200,1,0"/>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/scroll.css">
@@ -17,27 +18,26 @@
     <header id="navbar">
         <nav>
             <div class="content-menu-main">
-                <a id="logo" href="./home.html"><img src="/assets/svg-icon/logo-slack.svg" alt=""></a>
+                <a id="logo" href="./index.html"><img src="./assets/svg-icon/logo.svg" alt=""></a>
                 <span onclick="myFuncion()" id="button-open-menu">
                     Menu
                 </span>
             </div>
             <div class="content-menu">
                 <ul>
-                    <li><a href="index.html">Início</a><span class="material-symbols-rounded">arrow_outward</span></li>
+                    <li><a class="btn-menu-inside" href="index.html">Início <i class="ph-fill ph-house-line" style="font-size: 20px;"></i></a></li>
                     <li class="accordion-position">
-                        <button class="accordion">Projetos<span
-                                class="material-symbols-rounded">heart_check</span></button>
+                        <button class="accordion">Projetos<i class="ph-fill ph-projector-screen" style="font-size: 20px"; ></i></button>
                         <div class="panel style-panel">
                             <a class="dropdown-link" href="./zero.html">#1 Pixel:Level Zero Marketplace</a>
                             <a class="dropdown-link" href="">#2 Pixel Design System</a>
                             <a class="dropdown-link" href="./sobre.html">#3 Dc Clinical Saint Germain</a>
                         </div>
                     </li>
-                    <li><a href="/sobre.html">Sobre</a><span class="material-symbols-rounded">arrow_outward</span></li>
-                    <li><a href="">Contatos</a><span class="material-symbols-rounded">arrow_outward</span></li>
+                    <li><a class="btn-menu-inside" href="/sobre.html">Sobre<i class="ph-fill ph-arrow-elbow-down-right" style="font-size: 20px;"></i></a></li>
+                    <li><a class="btn-menu-inside" href="">Contatos<i class="ph-fill ph-arrow-elbow-down-right" style="font-size: 20px;"></i></a></li>
                     <li class="theme-dark-light">
-                        <span class="sub-title-menu">Theme</span>
+                        <span class="sub-title-menu">Escolha o tema</span>
                         <div class="themes">
                             <div class="theme" onclick="changeTheme('light')"></div>
                             <div class="theme" onclick="changeTheme('dark')"></div>
@@ -129,22 +129,6 @@
             </div>
         </div>
     </footer>
-    <div id="audio-container">
-        <audio id="myAudio" autoplay loop>
-            <source src="./assets/audios/seru_deja_vu.mp3" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-    </div>
-    <div class="controler-audio">
-        <button id="pause-play">
-            <span class="icon-play"></span>
-            <span class="icon-pause">
-                <div class="rectangle-shape"></div>
-                <div class="rectangle-shape"></div>
-            </span>
-        </button>
-        <input type="range" min="0" max="1" step="0.001" value="0.2" id="volumeSlider">
-    </div>
     <div id="cursor-pointer"></div>
     <script src="./script.js"></script>
 </body>
