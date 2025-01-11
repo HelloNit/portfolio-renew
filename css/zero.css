@@ -72,8 +72,8 @@ body{
     grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
     grid-template-rows: 1fr;
     grid-column-gap: 30px;
-    padding: 60px 200px;
     background-color: var(--section-secondary);
+    padding: 100px 300px 100px 300px;
 }
 
 /* Phone Drawing */
@@ -85,7 +85,7 @@ body{
 }
 
 .iphone {
-    width: 380px;
+    width: 420px;
     height: 830px;
     position: sticky;
     border-radius: 90px;
@@ -238,6 +238,7 @@ ol{
     }
 }
 
+
 .csd,
 .porter,
 .competitive,
@@ -247,8 +248,12 @@ ol{
 .empathy-map,
 .user-joruney,
 .user-flow,
-.architecture {
-    padding: 60px 200px;
+.architecture,
+.design-section,
+.design-system,
+.hi-fi,
+.hi-fi-ui-design {
+    padding: 60px 300px;
 }
 
 .post-sticky {
@@ -276,7 +281,6 @@ ol{
     border: 1px solid var(--border-color);
     box-shadow: var(--box-shadow);
     border-radius: 30px;
-    transition: 1s ease-in-out;
 }
 
 .dots-connect {
@@ -490,7 +494,6 @@ i {
     background-color: var(--card-bg-color);
     padding: 30px;
     border-radius: 20px;
-    margin-top: 60px;
     border: 1px solid var(--border-color);
     box-shadow: var(--box-shadow);
 }
@@ -750,6 +753,7 @@ i {
     border-radius: 40px;
     position: relative;
     height: 100%;
+    margin: 10px 0px 10px 0px;
 }
 
 .column-empathy{
@@ -832,19 +836,34 @@ i {
     background-color: #868585e8;
     border-radius: 20px;
     cursor: none;
-    width: 50%;
-    height: 50%;
+    width: 200px;
+    height: 200px;
 }
 
-.lo-fi-wireframing{
+.img-grid,
+.img-grid-hi-fi
+{
+  img{
+    width: 100%;
+    height: auto;
+  }
+}
+
+.spotlight{
     height: 100vh;
+    margin: 0%;
+    padding: 0;
+    img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
 }
 
 .next-project {
     width: 100%;
     height: 100vh;
     display: flex;
-    margin-top: 80px;
 }
 
 .next-project img {
@@ -887,7 +906,6 @@ i {
     font-weight: 700;
     font-size: 38px;
     letter-spacing: -1px;
-    color: var(--title);
     margin: 10px 0;
     color: #f86f2f;
 }

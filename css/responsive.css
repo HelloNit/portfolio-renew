@@ -1,4 +1,4 @@
-@media screen and (max-width: 460px) {
+@media (min-width: 320px) and (max-width: 490px) {
     h1 {
         font-size: 40px;
     }
@@ -21,6 +21,35 @@
         a {
             text-decoration: none;
         }
+    }
+
+    .card {
+        width: 100%;
+        height: 640px;
+        border-radius: 10px;
+        transition: 0.3s;
+        box-shadow: 11px 14px 58px -3px rgba(168, 168, 168, 1);
+        transition-timing-function: ease-out;
+        mix-blend-mode: luminosity;
+        text-decoration: none;
+    }
+    
+    .card img {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+        border-radius: 10px;
+    }
+    
+    .card:hover {
+        mix-blend-mode: normal;
+        transition: 0.3s;
+        transform: scale(1);
+    }
+    
+    .text-content {
+        position: relative;
+        top: -100%;
     }
 
     #cursor-pointer {
@@ -46,7 +75,11 @@
     .empathy-map,
     .user-joruney,
     .user-flow,
-    .architecture {
+    .architecture,
+    .design-system,
+    .design-section,
+    .hi-fi,
+    .hi-fi-ui-design {
         padding: 30px 16px;
     }
 
@@ -188,8 +221,8 @@
     }
 
     .img-magnifier-glass {
-        width: 90px;
-        height: 90px;
+        width: 300px;
+        height: 300px;
     }
 
     .title-project {
@@ -210,6 +243,84 @@
         height: 100vh;
     }
 
+
+    /* Sobre */
+
+    .hero-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+
+        }
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 60px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .content-about-me {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2fr;
+        margin: 40px 0px;
+    }
+
+    .content-about-me img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content-about-me p {
+        font-size: 40px;
+        letter-spacing: -2px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .spotlight {
+        font-weight: bolder;
+        color: #f86f2f;
+    }
+
+    .section-two {
+        -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+
+    }
+
+    .content-about-me-education {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 100px;
+        margin: 40px 0px;
+    }
+
+    .content-about-me-education h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .content-about-me-education p {
+        font-size: 30px;
+        letter-spacing: -2px;
+    }
+
+
+
     /* Contatos */
 
     .contanct-me {
@@ -223,7 +334,13 @@
 
 }
 
-@media screen and (max-width: 1024px) {
+@media (min-width: 491px) and (max-width: 1024px){
+    .position-elements{
+        padding: 20px 20px 80px 20px;
+    }
+}
+
+@media (min-width: 1025px) and (max-width: 1114px) {
     h1 {
         font-size: 40px;
     }
@@ -260,8 +377,7 @@
     .side-bar-section {
         display: none;
     }
-
-    .position-elements,
+    
     .csd,
     .porter,
     .competitive,
@@ -271,7 +387,10 @@
     .empathy-map,
     .user-joruney,
     .user-flow,
-    .architecture {
+    .architecture,
+    .design-section,
+    .design-system,
+    .hi-fi-ui-design {
         padding: 30px 16px;
     }
 
@@ -435,6 +554,79 @@
         height: 100vh;
     }
 
+
+    /* Sobre */
+
+    .hero-section {
+        position: relative;
+        height: 100vh;
+        width: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+        }
+    }
+
+    .title {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        font-size: 70px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .text-content {
+        top: -100%;
+    }
+
+    .content-about-me {
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-rows: 2fr;
+        margin: 80px 0px;
+    }
+
+    .content-about-me img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .content-about-me p {
+        font-size: 40px;
+        letter-spacing: -2px;
+        padding: 0px;
+        margin: 0;
+    }
+
+    .spotlight {
+        font-weight: bolder;
+        color: #f86f2f;
+    }
+
+    .content-about-me-education {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 1fr;
+        grid-column-gap: 40px;
+        margin: 40px 0px;
+    }
+
+    .content-about-me-education h2 {
+        font-size: 40px;
+        letter-spacing: -2px;
+    }
+
+    .content-about-me-education p {
+        font-size: 30px;
+        letter-spacing: -2px;
+    }
+
     /* Contatos */
 
     .contanct-me {
@@ -448,41 +640,13 @@
 
 }
 
-/* @media (max-width: 1114px) {
-
-    h1 {
-        font-size: 48px;
+@media (min-width: 2560px){
+    .main-content-home,
+    .marquee{
+        padding-left: 10%;
+        padding-right: 10%;
     }
-
-    .link-business {
-        font-size: 48px;
-    }
-
-    h3 {
-        text-align: left;
-    }
-
-    .main-content-home {
-        margin: 30px 16px;
-    }
-
-    .grid {
-        display: grid;
-        grid-template-columns: repeat(auto-fill, minmax(300px, 2fr));
-        grid-column-gap: 30px;
-        grid-row-gap: 30px;
-        margin-top: 30px;
-
-        a {
-            text-decoration: none;
-        }
-    }
-
-    #cursor-pointer {
-        display: none;
-    }
-
-    /* .position-elements,
+    .position-elements,
     .csd,
     .porter,
     .competitive,
@@ -492,11 +656,12 @@
     .empathy-map,
     .user-joruney,
     .user-flow,
-    .architecture {
-        padding: 30px 100px;
-    } */
-
-    /* .img-magnifier-glass {
-        width: 30px;
-        height: 30px;
-    } */
+    .architecture,
+    .design-section,
+    .hi-fi,
+    .design-system,
+    .hi-fi-ui-design {
+        padding-left: 25%;
+        padding-right: 20%;
+    }
+}
