@@ -354,6 +354,7 @@ button {
   
   .timeline__date > div:first-child {
     font-size: 1.3rem;
+    font-family: "Mulish", sans-serif;
   }
   
   .timeline__bullet {
@@ -361,7 +362,7 @@ button {
     background-color: var(--icon-color);
     width: var(--bullet-dims);
     height: var(--bullet-dims);
-    border-radius: 99999%;
+    border-radius: 100%;
     transform: translateX(calc(var(--bullet-dims) / 2 + 2px));
     float: right;
   }
@@ -369,6 +370,7 @@ button {
   .timeline__content {
     font-size: 3rem;
     color: var(--color-grey);
+    font-family: "Mulish", sans-serif;
     transition: color 1s cubic-bezier(0, 0.39, 0.58, 1);
   }
   
