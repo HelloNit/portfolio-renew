@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
 //Jquery
 
 $(document).ready(function () {
-  $('#navbar').load('home.html header', function (_response, status, xhr) {
+  $('#navbar').load('index.html header', function (_response, status, xhr) {
       if (status == "error") {
           console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
       } else {
@@ -141,7 +141,7 @@ $(document).ready(function () {
       }
   });
 
-  $('#footer').load('home.html footer', function (_response, status, xhr) {
+  $('#footer').load('index.html footer', function (_response, status, xhr) {
       if (status == "error") {
           console.error("Erro ao carregar footer:", xhr.status, xhr.statusText);
       } else {
