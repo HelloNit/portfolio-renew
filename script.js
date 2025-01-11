@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', (event) => {
   audio.addEventListener('timeupdate', () => {
       localStorage.setItem('audioCurrentTime', audio.currentTime); // Salva o tempo atual do áudio
   });
-});
+});''
 
 //Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {
