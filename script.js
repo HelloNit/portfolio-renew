@@ -16,6 +16,14 @@ $(document).ready(function () {
   });
 });
 
+window.onload = function () {
+  const links = document.querySelectorAll('link[rel="stylesheet"]');
+  links.forEach(link => {
+    const href = link.getAttribute('href');
+    link.setAttribute('href', `${href}?t=${new Date().getTime()}`);
+  });
+};
+
 function myFuncion() {
   const contentMenu = document.querySelector('.content-menu');
   contentMenu.classList.toggle('active');
