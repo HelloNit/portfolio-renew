@@ -1,3 +1,21 @@
+$(document).ready(function () {
+  $('#navbar').load('index.html header', function (_response, status, xhr){
+      if (status == "error") {
+          console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
+      } else {
+          console.log("Navbar funcionando.");
+      }
+  });
+
+  $('#footer').load('index.html footer', function (_response, status, xhr){
+      if (status == "error") {
+          console.error("Erro ao carregar footer:", xhr.status, xhr.statusText);
+      } else {
+          console.log("Footer funcionando.");
+      }
+  });
+});
+
 function myFuncion() {
   const contentMenu = document.querySelector('.content-menu');
   contentMenu.classList.toggle('active');
@@ -31,14 +49,14 @@ const changeTheme = (theme) => {
 //Cursor mouse estilizado
 document.addEventListener("DOMContentLoaded", function () {
   var follower = document.querySelector('#cursor-pointer');
-  var delay = 110;
+  var delay = 100;
 
   document.addEventListener('mousemove', function (e) {
     setTimeout(function () {
       var x = e.clientX;
       var y = e.clientY;
-      follower.style.left = (x - 10) + 'px';
-      follower.style.top = (y - 10) + 'px';
+      follower.style.left = (x - 20) + 'px';
+      follower.style.top = (y - 20) + 'px';
     }, delay);
   });
 });
@@ -61,7 +79,7 @@ function rotateToMouse(e, card, bounds) {
       rotate3d(
         ${center.y / 100},
         ${-center.x / 100}, 0,
-        ${Math.log(distance) * 3}deg
+        ${Math.log(distance) * 4}deg
       )
     `;
 }
@@ -77,25 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
   document.addEventListener('mousemove', onMouseMove);
 });
 
-//Jquery
-
-$(document).ready(function () {
-  $('#navbar').load('index.html header', function (_response, status, xhr) {
-      if (status == "error") {
-          console.error("Erro ao carregar menu:", xhr.status, xhr.statusText);
-      } else {
-          console.log("Navbar funcionando.");
-      }
-  });
-
-  $('#footer').load('index.html footer', function (_response, status, xhr) {
-      if (status == "error") {
-          console.error("Erro ao carregar footer:", xhr.status, xhr.statusText);
-      } else {
-          console.log("Footer funcionando.");
-      }
-  });
-});
 
 //Esconder e mostrar mais
 function showText() {
