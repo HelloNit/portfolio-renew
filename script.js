@@ -16,26 +16,27 @@ $(document).ready(function () {
   });
 });
 
-window.onload = function () {
-  const links = document.querySelectorAll('link[rel="stylesheet"]');
-  links.forEach(link => {
-    const href = link.getAttribute('href');
-    link.setAttribute('href', `${href}?t=${new Date().getTime()}`);
-  });
-};
-
 function myFuncion() {
   const contentMenu = document.querySelector('.content-menu');
+  const button = document.getElementById('button-open-menu');
   contentMenu.classList.toggle('active');
+  if (contentMenu.classList.contains('active')) {
+    button.textContent = 'Fechar';
+  } else {
+    button.textContent = 'Menu';
+  }
 }
 
 document.addEventListener('click', (event) => {
   const navbar = document.getElementById('navbar');
+  const button = document.getElementById('button-open-menu');
   if (!navbar.contains(event.target)) {
     const contentMenu = document.querySelector('.content-menu');
     contentMenu.classList.remove('active');
+    button.textContent = 'Menu';
   }
 });
+
 
 //Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {

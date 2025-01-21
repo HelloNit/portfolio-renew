@@ -22,6 +22,7 @@ nav {
     display: flex;
     justify-content: space-between;
     width: 100%;
+    cursor: pointer;
 }
 
 .content-menu {
@@ -89,8 +90,8 @@ li {
     width: 100%;
     height: 100%;
     list-style: none;
-    color: var(--text-color);
     transition: 0.4s ease-in-out;
+    color: var(--text-color);
 
     button {
         all: unset;
@@ -99,10 +100,6 @@ li {
         font-weight: 700;
         font-size: 18px;
     }
-}
-
-li:hover{
-    color:#f86f2f;
 }
 
 .btn-menu-inside{
@@ -118,10 +115,17 @@ a {
     font-weight: 700;
     font-size: 18px;
     color: var(--text-color);
+    transition: 0.4s ease-in-out;
 }
 
 a:hover{
     color:#f86f2f;
+    transition: 0.4s ease-in-out;
+}
+
+a:hover i {
+    color: #f86f2f; /* Cor do hover para o ícone */
+    transition: 0.4s ease-in-out;
 }
 
 .sub-title-menu {
@@ -151,6 +155,8 @@ a:hover{
 }
 
 .dropdown-link {
+    display: flex;
+    justify-content: space-between;
     padding: 20px 0px;
     font-weight: 400;
     font-size: 14px;
@@ -269,6 +275,12 @@ a:hover{
             font-weight: 700;
             font-size: 18px;
         }
+    }
+
+    img{
+        width: 24px;
+        height: 24px;
+        color: blue;
     }
 
     a {
