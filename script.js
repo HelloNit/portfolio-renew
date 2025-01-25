@@ -73,7 +73,8 @@ document.addEventListener("DOMContentLoaded", function () {
 //Rotação do card e seguir mouse
 const cards = document.querySelectorAll('.card');
 
-function rotateToMouse(e, card, bounds) {
+function rotateToMouse(e, card) {
+  const bounds = card.getBoundingClientRect();
   const mouseX = e.clientX;
   const mouseY = e.clientY;
   const leftX = mouseX - bounds.left;
@@ -82,47 +83,25 @@ function rotateToMouse(e, card, bounds) {
     x: leftX - bounds.width / 2,
     y: topY - bounds.height / 2
   };
-  const distance = Math.sqrt(center.x ** 2 + center.y ** 2);
 
+  const rotateX = (center.y / bounds.height) * 30; // Adjust the multiplier for desired effect
+  const rotateY = -(center.x / bounds.width) * 30; // Adjust the multiplier for desired effect
+
+  card.style.transition = 'transform 0.1s ease-out'; // Smooth transition
   card.style.transform = `
-      rotate3d(
-        ${center.y / 100},
-        ${-center.x / 100}, 0,
-        ${Math.log(distance) * 4}deg
-      )
-    `;
+    perspective(1000px)
+    rotateX(${rotateX}deg)
+    rotateY(${rotateY}deg)
+  `;
 }
 
-function onMouseMove(e) {
-  cards.forEach(card => {
-    const bounds = card.getBoundingClientRect();
-    rotateToMouse(e, card, bounds);
+cards.forEach(card => {
+  card.addEventListener('mousemove', (e) => rotateToMouse(e, card));
+  card.addEventListener('mouseleave', () => {
+    card.style.transition = 'transform 0.5s ease-out'; // Smooth transition back to original state
+    card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   });
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-  document.addEventListener('mousemove', onMouseMove);
 });
-
-
-//Esconder e mostrar mais
-function showText() {
-  var dots = document.getElementById("dots");
-  var more = document.getElementById("moreInfo");
-  var btnText = document.getElementById("btn-show");
-
-  if (dots.style.display === "none") {
-    dots.style.display = "inline";
-    btnText.innerHTML = "Ler mais...";
-    more.style.display = "none";
-  } else {
-    dots.style.display = "none";
-    btnText.innerHTML = "Recolher"
-    more.style.display = "inline";
-    drawCharts();
-  }
-}
-
 //Barra lateral
 var $window = (window)
 
@@ -233,3 +212,29 @@ window.addEventListener(
   },
   { passive: true }
 );
+
+function ajustarTimeline() {
+  const larguraMobile = window.matchMedia("(max-width: 490px)");
+  const secoesTimeline = document.querySelectorAll(".timeline__section");
+
+  secoesTimeline.forEach((secao) => {
+    const content = secao.querySelector(".timeline__content");
+    const date = secao.querySelector(".timeline__date");
+    const parent = content?.parentElement;
+
+    if (larguraMobile.matches) {
+      if (content && date && parent.firstChild !== date) {
+        parent.insertBefore(date, content);
+      }
+    } else {
+      const timelineLeft = secao.querySelector(".timeline__left");
+      if (timelineLeft && date && timelineLeft.firstChild !== date) {
+        timelineLeft.appendChild(date);
+      }
+    }
+  });
+}
+
+ajustarTimeline();
+
+window.addEventListener("resize", ajustarTimeline);

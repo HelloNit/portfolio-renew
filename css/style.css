@@ -486,8 +486,9 @@ h6 {
     pointer-events: none;
     background-color: #ff2600;
     border-radius: 100%;
-    mix-blend-mode: color-dodge;
+    mix-blend-mode: exclusion;
     width: 40px;
     height: 40px;
     z-index: 9999;
+    opacity: 0.1;
 }

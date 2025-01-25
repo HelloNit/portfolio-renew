@@ -220,11 +220,6 @@
         align-items: center;
     }
 
-    .img-magnifier-glass {
-        width: 300px;
-        height: 300px;
-    }
-
     .title-project {
         font-size: 20px;
     }
@@ -243,7 +238,6 @@
         height: 100vh;
     }
 
-
     /* Sobre */
 
     .hero-section {
@@ -257,7 +251,14 @@
             object-fit: cover;
             position: absolute;
             -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
-
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
         }
     }
 
@@ -297,29 +298,69 @@
     }
 
     .section-two {
-        -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            position: absolute;
+            -webkit-mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+            mask-image: linear-gradient(270deg, transparent, #fff 100%, #fff 0%, transparent);
+        }
 
     }
 
-    .content-about-me-education {
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        grid-template-rows: 1fr;
-        grid-column-gap: 100px;
-        margin: 40px 0px;
+    .timeline__section{
+        grid-template-columns: auto 5px auto ;
     }
 
-    .content-about-me-education h2 {
-        font-size: 40px;
-        letter-spacing: -2px;
+    .title-main {
+        font-size: 10px;
     }
 
-    .content-about-me-education p {
-        font-size: 30px;
-        letter-spacing: -2px;
+    .timeline__date {
+        display: flex;
+        flex-direction: column;
+        align-items: center; 
+        justify-content: center; 
+        text-align: center; 
+        margin: 0 auto; 
+      }
+      
+    
+
+    .date {
+        font-family: "Mulish", sans-serif;
+        font-size: 14px;
+        white-space: nowrap;
     }
 
+    .timeline__left {
+        font-size: 18px;
+        display: none;
+    }
 
+    .timeline__content {
+        font-size: 18px;
+        color: var(--color-grey);
+        font-family: "Mulish", sans-serif;
+        transition: color 1s cubic-bezier(0, 0.39, 0.58, 1);
+    }
+
+    .timeline__right {
+        display: flex;
+        flex-direction: column;
+      }
+
+    .timeline__right>div{
+        padding-left: 10px;
+    }
 
     /* Contatos */
 
@@ -338,6 +379,8 @@
     .position-elements{
         padding: 20px 20px 80px 20px;
     }
+
+    
 }
 
 @media (min-width: 1025px) and (max-width: 1114px) {
