@@ -331,9 +331,7 @@
         justify-content: center; 
         text-align: center; 
         margin: 0 auto; 
-      }
-      
-    
+      }  
 
     .date {
         font-family: "Mulish", sans-serif;
@@ -376,16 +374,39 @@
 }
 
 @media (min-width: 491px) and (max-width: 1024px){
+    .main-content-home{
+        margin: 20px;
+    }
+
+    .timeline{
+        max-width: 690px;
+    }
+
+    .title{
+        font-size: 70px;
+    }
+
+    .date{
+        font-size: 16px;
+    }
+
     .position-elements{
         padding: 20px 20px 80px 20px;
     }
 
-    
+    .title-main{
+        font-size: 10px;
+    }
+
+    .timeline__content{
+        font-size: 26px;
+    }
 }
 
 @media (min-width: 1025px) and (max-width: 1114px) {
     h1 {
         font-size: 40px;
+        mix-blend-mode: exclusion;
     }
 
     h3 {

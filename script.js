@@ -37,6 +37,16 @@ document.addEventListener('click', (event) => {
   }
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const currentTheme = localStorage.getItem('theme') || 'light';
+  document.body.className = `${currentTheme} fade-in`;
+
+  const themeToggleButton = document.getElementById('theme-toggle');
+  themeToggleButton.addEventListener('click', () => {
+    const newTheme = document.body.classList.contains('light') ? 'dark' : 'light';
+    changeTheme(newTheme);
+  });
+});
 
 //Tema Branco e Escuro
 document.addEventListener('DOMContentLoaded', () => {
@@ -70,11 +80,9 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
-//Rotação do card e seguir mouse
 const cards = document.querySelectorAll('.card');
 
-function rotateToMouse(e, card) {
-  const bounds = card.getBoundingClientRect();
+function rotateToMouse(e, card, bounds) {
   const mouseX = e.clientX;
   const mouseY = e.clientY;
   const leftX = mouseX - bounds.left;
@@ -84,8 +92,8 @@ function rotateToMouse(e, card) {
     y: topY - bounds.height / 2
   };
 
-  const rotateX = (center.y / bounds.height) * 30; // Adjust the multiplier for desired effect
-  const rotateY = -(center.x / bounds.width) * 30; // Adjust the multiplier for desired effect
+  const rotateX = (center.y / bounds.height) * 20; // Adjust the multiplier for desired effect
+  const rotateY = -(center.x / bounds.width) * 20; // Adjust the multiplier for desired effect
 
   card.style.transition = 'transform 0.1s ease-out'; // Smooth transition
   card.style.transform = `
@@ -96,12 +104,14 @@ function rotateToMouse(e, card) {
 }
 
 cards.forEach(card => {
-  card.addEventListener('mousemove', (e) => rotateToMouse(e, card));
+  const bounds = card.getBoundingClientRect();
+  card.addEventListener('mousemove', (e) => rotateToMouse(e, card, bounds));
   card.addEventListener('mouseleave', () => {
     card.style.transition = 'transform 0.5s ease-out'; // Smooth transition back to original state
     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0)';
   });
 });
+
 //Barra lateral
 var $window = (window)
 
@@ -236,5 +246,19 @@ function ajustarTimeline() {
 }
 
 ajustarTimeline();
-
 window.addEventListener("resize", ajustarTimeline);
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const titleSpans = document.querySelectorAll('.title span');
+
+  titleSpans.forEach(span => {
+      span.addEventListener('mouseover', () => {
+          span.classList.add('smoke');
+      });
+
+      span.addEventListener('animationend', () => {
+          span.classList.remove('smoke');
+      });
+  });
+});

@@ -1,5 +1,5 @@
 header {
-    width: 50%;
+    width: 56% !important;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
@@ -176,7 +176,7 @@ a:hover i {
 
 @media (max-width: 900px) {
     header {
-        width: 97%;
+        width: 97% !important;
         position: fixed;
         left: 50%;
         transform: translateX(-50%);
@@ -199,20 +199,25 @@ a:hover i {
         height: 100vh;
     }
 
-    .content-menu-main {
-        display: flex;
-        justify-content: space-between;
-    }
-
     .content-menu {
-        display: none;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
         width: 100%;
-        margin-bottom: 10px;
-        overflow-y: auto;
     }
-
+    
     .content-menu.active {
         display: block;
+        max-height: 600px;
+        opacity: 1;
+    }
+    
+    .accordion {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.4s;
     }
 
     .accordion {
@@ -339,5 +344,25 @@ a:hover i {
 @media (min-width: 1280px) and (max-width:1920px) {
     header{
         width: 70%;
+    }
+    .content-menu {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out, opacity 0.5s ease-in-out;
+        opacity: 0;
+        width: 100%;
+    }
+    
+    .content-menu.active {
+        display: block;
+        max-height: 600px;
+        opacity: 1;
+    }
+    
+    .accordion {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        transition: 0.4s;
     }
 }
